@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naša Tajna Igra 🔥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="logo-badge">💋 SAMO ZA NAS DVOJE 💋</div>
+    <h1>NAŠA TAJNA<br>IGRA</h1>
+    <p class="subtitle">pitanja koja pucaju 🔥</p>
+  </header>
+
+  <!-- Category filter -->
+  <div class="categories" id="catRow">
+    <div class="chip active" data-cat="soft">💙 Nježno</div>
+    <div class="chip active" data-cat="srednje">🔶 Zagrijavanje</div>
+    <div class="chip active" data-cat="vruće">🔥 Vruće</div>
+    <div class="chip active" data-cat="tantric">🌀 Tantrik</div>
+    <div class="chip active" data-cat="spicy">🌶️ Spicy</div>
+    <div class="chip active" data-cat="ekstra">⚡ Ekstra</div>
+  </div>
+
+  <!-- Card -->
+  <div class="card-wrap">
+    <div class="card" id="card">
+      <span class="question-number" id="qNum">#0</span>
+      <span class="cat-label" id="catLabel" style="color: var(--cyan); border-color: var(--cyan);">SPREMAN?</span>
+      <p class="question-text empty" id="questionText">
+        Odaberi kategorije i pritisni gumb da počneš igru 🎴
+      </p>
+      <div class="bubble-tail" id="bubbleTail" style="display:none"></div>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+    <span class="progress-text" id="progressText">0 / 0 odigranih</span>
+  </div>
+
+  <!-- Buttons -->
+  <div class="btn-row">
+    <button class="btn btn-generate" id="btnGen">🎲 NOVO PITANJE</button>
+    <button class="btn btn-skip" id="btnSkip">⏭ Preskoči</button>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-num" id="statTotal" style="color: var(--hot-pink);">0</div>
+      <div class="stat-label">odigranih</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" id="statSkipped" style="color: rgba(255,255,255,0.3);">0</div>
+      <div class="stat-label">preskočenih</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" id="statLeft" style="color: var(--cyan);">—</div>
+      <div class="stat-label">preostalo</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">🎉 Sve si prošao!</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
